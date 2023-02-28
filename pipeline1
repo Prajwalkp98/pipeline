@@ -10,7 +10,7 @@ pipeline {
             }
         }
 
-        stage('TEST') {
+        stage('TEST1') {
             steps{
                 sh '''
                     sleep 6
@@ -19,7 +19,23 @@ pipeline {
             }
         }
 
-        stage('DEPLOY') {
+        stage('DEPLOY1') {
+            steps{
+                sh '''
+                    sleep 5
+                    echo "This is a DEPLOY stage"
+                '''
+            }
+        }
+        stage('TEST2') {
+            steps{
+                sh '''
+                    sleep 5
+                    echo "This is a DEPLOY stage"
+                '''
+            }
+        }
+        stage('DEPLOY2') {
             steps{
                 sh '''
                     sleep 5
